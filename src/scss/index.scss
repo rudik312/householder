@@ -10,8 +10,25 @@
   }
   // .main__item
   &__item {
+    padding-bottom: 85px;
     &:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 45px;
       padding-top: 80px;
+    }
+    &:last-child {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 145%;
+        height: 145%;
+        background-image: url(../img/main/main-bg.png);
+        top: -80px;
+        left: -300px;
+      }
     }
   }
   // .main__inner
@@ -41,10 +58,10 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    &::before{
+    &::before {
       width: 226px;
       height: 51px;
-      content:'';
+      content: "";
       position: absolute;
       background-image: url(../img/main/decor-radius.png);
       left: 0;
@@ -73,8 +90,7 @@
     display: inline-flex;
     align-items: center;
     column-gap: 10px;
-    background: linear-gradient(138deg, #00c72c 50%, #d7ea01 90%),
-      linear-gradient(138deg, #00c72c 68.4%, #afe70f 100%);
+    background: linear-gradient(138deg, #00c72c 60%, #d7ea01 100%), linear-gradient(138deg, #00c72c 68.4%, #afe70f 100%);
   }
   // .main__btn-text
   &__btn-text {
@@ -95,8 +111,8 @@
   }
   // .main__img
   &__img {
-    width: 470px;
-    height: 470px;
+    img {
+    }
   }
 }
 .swiper {
