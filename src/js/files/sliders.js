@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,12 +28,13 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдеров
 	// Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.swiper')) { // Указываем склас нужного слайдера
+	if (document.querySelector('.main__slider')) { // Указываем склас нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем склас нужного слайдера
+		new Swiper('.main__slider', { // Указываем склас нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Autoplay, Navigation],
+			direction: "vertical",
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -43,18 +44,18 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
-			/*
+			
 			// Эффекты
-			effect: 'fade',
+			effect: 'slide',
 			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
+				delay: 2000,
+				// disableOnInteraction: false,
 			},
-			*/
+			
 
 			// Пагинация
 			/*
@@ -73,10 +74,10 @@ function initSliders() {
 			*/
 
 			// Кнопки"влево/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 			/*
 			// Брейкпоинты
 			breakpoints: {

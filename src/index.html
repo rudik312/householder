@@ -1,16 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"Домовладелец"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-				
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+  @@include('html/_head.htm',{ "title":"Домовладелец" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="main">
+          <div class="main__container">
+            <div class="main__items">
+              <div class="main__item">
+                <div class="main__inner">
+                  <div class="main__heading">
+                    <p class="main__heading-text">удобная</p>
+                    <div class="main__heading-decor">
+                      <p>программа</p>
+                    </div>
+                  </div>
+                  <div class="main__slider swiper">
+                    <div class="main__wrapper swiper-wrapper">
+                      <div class="main__slide swiper-slide">
+                        <span>для управлящих компаний</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для ТСЖ, ЖК, ЖСК, ТСН</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для коттеджных поселков и СНТ</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для теплосбыта</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для энергосбыта</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для водоканала</span>
+                      </div>
+                      <div class="main__slide swiper-slide">
+                        <span>для расчетных центров</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="main__btn" href="#">
+									<p class="main__btn-text">Установить демоверсию</p>
+									<div class="main__btn-icon">
+										<img src="@img/icons/arrow-up.svg" alt="arrow-up">
+									</div>
+								</a>
+              </div>
+							<div class="main__item">
+								<div class="main__img">
+									<img src="@img/main/main-bg.png" alt="main-bg">
+								</div>
+							</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>
