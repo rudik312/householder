@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   @@include('html/_head.htm',{ "title":"Домовладелец" })
   <body>
-    <div class="wrapper">
+    <div class="wrapper" data-scroll-container>
       @@include('html/_header.htm',{})
       <main class="page">
         <!-- start main -->
-        <section class="main">
+        <section class="main" data-scroll-section>
           <div class="main__container">
             <div class="main__items">
               <div class="main__item">
@@ -74,40 +74,90 @@
         </section>
         <!-- end main -->
         <!-- start install -->
-        <section class="install" data-prlx-parent>
+        <section class="install" data-scroll-section>
           <div class="install__container">
             <div class="install__content">
-                <div class="install__heading">
-                  <p class="install__text">полный пакет</p>
-                  <div class="install__decor">
-                    <p>установки</p>
+              <div class="install__heading">
+                <p class="install__text">полный пакет</p>
+                <div class="install__decor">
+                  <p>установки</p>
+                </div>
+              </div>
+              <div class="install__info">
+                <p>сайт с кабинетом жителя</p>
+                <p>программа для управляющих компаний</p>
+                <p>мобильное приложение</p>
+                <p>гис-интеграция</p>
+              </div>
+              <div class="install__action">
+                <a class="install__btn" href="#">
+                  <p class="install__btn-text">попробовать</p>
+                  <div class="install__btn-icon">
+                    <img src="@img/icons/arrow-up-white.svg" alt="arrow-up" />
                   </div>
+                </a>
+              </div>
+              <div
+                class="install__parallax"
+                data-scroll-position="top"
+                data-scroll
+                data-scroll-speed="5"
+              >
+                <div class="install__image">
+                  <img src="@img/install/parallax-bg.png" alt="install-image" />
                 </div>
-                <div class="install__info">
-                  <p>сайт с кабинетом жителя</p>
-                  <p>программа для управляющих компаний</p>
-                  <p>мобильное приложение</p>
-                  <p>гис-интеграция</p>
-                </div>
-                <div class="install__action">
-                  <a class="install__btn" href="#">
-                    <p class="install__btn-text">попробовать</p>
-                    <div class="install__btn-icon">
-                      <img src="@img/icons/arrow-up-white.svg" alt="arrow-up" />
+                <div class="install__items">
+                  <div class="install__item">
+                    <div class="install__item-icon">
+                      <img src="@img/install/1.svg" alt="install" />
                     </div>
-                  </a>
-                </div>
-              <div class="install__parallax" data-prlx>
-                <div class="install__image-ibg">
-                  <img src="@img/install/parallax-bg.png" alt="install-image">
+                    <div class="install__item-text">
+                      <p>
+                        Идеален и для крупных предприятий и для небольших (от 1
+                        дома)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="install__item">
+                    <div class="install__item-icon">
+                      <img src="@img/install/2.svg" alt="install" />
+                    </div>
+                    <div class="install__item-text">
+                      <p>Облачная версия программы без доплаты</p>
+                    </div>
+                  </div>
+                  <div class="install__item">
+                    <div class="install__item-icon">
+                      <img src="@img/install/3.svg" alt="install" />
+                    </div>
+                    <div class="install__item-text">
+                      <p>
+                        Помогаем быстро перейти на Домовладелец за минимальное
+                        время
+                      </p>
+                    </div>
+                  </div>
+                  <div class="install__item">
+                    <div class="install__item-icon">
+                      <img src="@img/install/4.svg" alt="install" />
+                    </div>
+                    <div class="install__item-text">
+                      <p>Специализированная бухгалтерия ЖКХ + CRM-система</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
         <!-- end install -->
-        
+        <!-- start functional -->
+        <section class="functional" data-scroll-section>
+          <div class="functional__container">
+            
+          </div>
+        </section>
+        <!-- end functional -->
       </main>
       @@include('html/_footer.htm',{})
     </div>

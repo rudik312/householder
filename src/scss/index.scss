@@ -148,21 +148,20 @@
 .install {
   // .install__container
   &__container {
-    // margin-top: 60px;
     padding-top: 75px;
   }
   // .install__content
   &__content {
     position: relative;
-    margin-bottom: 130px;
+    // margin-bottom: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
     z-index: 5;
-    &::before{
-      width: 400%;
-      height: 620%;
+    &::before {
+      width: 90%;
+      height: 40%;
       zoom: 90%;
       content: "";
       position: absolute;
@@ -170,10 +169,8 @@
       background-repeat: no-repeat;
       left: 90px;
       top: -49px;
-
     }
   }
-
   // .install__heading
   &__heading {
     display: flex;
@@ -224,6 +221,7 @@
   &__action {
     display: flex;
     justify-content: center;
+    // margin-bottom: 100px;
   }
   // .install__btn
   &__btn {
@@ -233,7 +231,7 @@
     align-items: center;
     column-gap: 10px;
     background-color: #fff;
-    z-index: 5;
+    z-index: 10;
   }
   // .install__btn-text
   &__btn-text {
@@ -255,16 +253,56 @@
 
   // .install__parallax
   &__parallax {
-    z-index: 2;
-    width: 504px;
-    height: 450px;
-    margin: 0 auto;
+    padding-top: 100px;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    row-gap: 150px;
+    z-index: 10;
   }
   // .install__image
-  &__image-ibg {
-    padding-bottom: percent(450, 504);
+  &__image {
+    z-index: 10;
+    // padding-bottom: percent(450, 504);
     img {
-
     }
   }
+
+  // .install__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+  }
+  // .install__item
+  &__item {
+
+    border-radius: 32px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+    background-color: #fff;
+  }
+  // .install__item-icon
+  &__item-icon {
+    padding: 14px;
+    border-radius: 20px;
+    background-color: $green;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  // .install__item-text
+  &__item-text {
+    @extend %ubun-400;
+    font-size: toRem(18);
+    line-height: 140%;
+  }
 }
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================

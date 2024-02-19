@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+  z-index: 10;
   // .header__container
   &__container {
     padding-bottom: 40px;
@@ -63,7 +64,6 @@
   }
 
   &__action {
-    z-index: 5;
     display: flex;
     align-items: center;
 		white-space: nowrap;

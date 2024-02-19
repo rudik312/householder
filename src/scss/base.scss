@@ -2,6 +2,9 @@
 // Для подключения / отключения стилей конкретного элемента формы смотри base/forms / forms.scss
 @import "base/forms/forms";
 
+//Стили locomotive-scroll
+@import "libs/locomotive-scroll.scss";
+
 // Стили попапов
 // @import "base/popup";
 
