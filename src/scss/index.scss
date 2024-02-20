@@ -26,9 +26,10 @@
       &::before {
         content: "";
         position: absolute;
-        width: 150%;
+        width: 170%;
         height: 130%;
         background-image: url(../img/main/main-bg.png);
+        background-repeat: no-repeat;
         top: -80px;
         left: -290px;
       }
@@ -253,7 +254,7 @@
 
   // .install__parallax
   &__parallax {
-    padding-top: 100px;
+    // padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,12 +304,14 @@
 }
 
 //========================================================================================================================================================
-
+//.indispensable 
 //========================================================================================================================================================
 .indispensable {
   // .indispensable__container
   &__container {
-  padding-top: 150px;}
+    padding-top: 115px;
+    padding-bottom: 75px;
+  }
   // .indispensable__inner
   &__inner {
     display: grid;
@@ -317,24 +320,74 @@
   }
   // .indispensable__heading
   &__heading {
+    position: relative;
+    
+    @extend %mont-600;
+    font-size: toRem(48);
+    line-height: 120%;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 175%;
+      height: 165%;
+      background-image: url(../img/indispensable/indispensable-bg.png);
+      background-repeat: no-repeat;
+      top: -110px;
+      left: -80px;
+    }
   }
   // .indispensable__title
   &__title {
+    max-width: 420px;
   }
   // .indispensable__items
   &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
   }
   // .indispensable__item
   &__item {
+
   }
   // .indispensable__marquee
   &__marquee {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    @extend %must-600;
+    font-size: toRem(20);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    color: #61d91d;
   }
   // .indispensable__list
   &__list {
+    padding-top: 25px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    @extend %mont-500;
+    font-size: toRem(16);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    color: #4c5261;
+
   }
   // .indispensable__list-item
   &__list-item {
+    position: relative;
+    &::before{
+      width: 2.5px;
+      height: 2.5px;
+      content:'';
+      position: absolute;
+      background-color: #4c5261;
+      top: 7px;
+      left: -13px;
+    }
   }
 }
 
