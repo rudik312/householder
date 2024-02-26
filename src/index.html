@@ -101,8 +101,7 @@
                 class="install__parallax"
                 data-scroll
                 data-scroll-position="center"
-                data-scroll-speed="5"
-                data-scroll-repeat="true"
+                data-scroll-speed="2"
               >
                 <div class="install__image">
                   <img src="@img/install/parallax-bg.png" alt="install-image" />
@@ -154,10 +153,12 @@
         <!-- end install -->
         <!-- start functional -->
         <section class="functional" data-scroll-section>
-          <div class="functional__container"></div>
+          <div class="functional__container">
+
+          </div>
         </section>
         <!-- end functional -->
-
+        <!-- start indispensable" -->
         <section class="indispensable" data-scroll-section>
           <div class="indispensable__container">
             <div class="indispensable__inner">
@@ -203,6 +204,47 @@
             </div>
           </div>
         </section>
+        <!-- end indispensable -->
+        <!-- start tablet -->
+        <section class="tablet" data-scroll-section>
+          <div class="tablet__container">
+            <div class="tablet__inner">
+              <div class="tablet__heading">
+                <p class="tablet__heading-text">решение, построенное</p>
+                <div class="tablet__heading-decor">
+                  <p>под ваши задачи</p>
+                </div>
+              </div>
+              <div class="tablet__slider swiper">
+                <!-- Двигающееся часть слайдера -->
+                <div class="tablet__wrapper swiper-wrapper">
+                  <!-- Слайд -->
+                  <div class="tablet__slide swiper-slide">
+                    <div class="tablet__item">
+                      <div class="tablet__img">
+                        <img src="@img/tablet/tablet-1.png" alt="tablet">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tablet__slide swiper-slide">
+                    <div class="tablet__item">
+                      <div class="tablet__img">
+                        <img src="@img/tablet/tablet-1.png" alt="tablet">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Если нужна навигация (влево/вправо) -->
+                <button type="button" class="swiper-button-prev"></button>
+                <button type="button" class="swiper-button-next"></button>
+                <!-- Если нужен скролбар -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- end tablet -->
       </main>
       @@include('html/_footer.htm',{})
     </div>

@@ -130,7 +130,7 @@
 		"scope": "html",
 		"prefix": "cnt",
 		"body": "<div class=\"${1:name}__container\">\n\t$2\n</div>",
-		"description": "Додає обмежуючий контейнер"
+		"description": "Добавляет ограничивающий контейнер"
 	},
 	"Adaptiv Value": {
 		"scope": "scss",
@@ -138,7 +138,7 @@
 		"body": [
 			"@include adaptiveValue(\"${1:font-size}\", $2, $3);"
 		],
-		"description": "Адаптивна властивість (clamp): CSS-властивість, початкове значення, кінцеве значення, ширина початкова, ширина кінцева"
+		"description": "Адаптивное свойство (clamp): CSS-свойство, начальное значение, конечное значение, ширина начальная, ширина конечная"
 	},
 	"EM": {
 		"scope": "scss",
@@ -146,7 +146,7 @@
 		"body": [
 			"em($1,$2)"
 		],
-		"description": "Виклик міксину переведення в EM"
+		"description": "Вызов миксина перевода в EM"
 	},
 	"REM": {
 		"scope": "scss",
@@ -154,7 +154,7 @@
 		"body": [
 			"toRem($1)"
 		],
-		"description": "Виклик міксину переведення в REM"
+		"description": "Вызов миксина перевода в REM"
 	},
 	"Percent": {
 		"scope": "scss",
@@ -162,7 +162,7 @@
 		"body": [
 			"percent($1,$2)"
 		],
-		"description": "Виклик міксину переведення в %"
+		"description": "Вызов миксина перевода в %"
 	},
 	"Percent padding": {
 		"scope": "scss",
@@ -170,7 +170,7 @@
 		"body": [
 			"padding-bottom: percent($1,$2);"
 		],
-		"description": "Відступ вниз із зазначенням %"
+		"description": "Отступ вниз с указанием %"
 	},
 	"Pharagraph": {
 		"scope": "html,js",
@@ -178,7 +178,7 @@
 		"body": [
 			"<p>$1</p>"
 		],
-		"description": "Параграф тексту"
+		"description": "Параграф текста"
 	},
 	"Link": {
 		"scope": "html,js",
@@ -186,7 +186,7 @@
 		"body": [
 			"<a href=\"$1\">$2</a>"
 		],
-		"description": "Параграф тексту"
+		"description": "Ссылка"
 	},
 	"Font Size in REM": {
 		"scope": "scss",
@@ -194,7 +194,7 @@
 		"body": [
 			"font-size: toRem($1);"
 		],
-		"description": "Переводит PX в REM"
+		"description": "Переводит шрифт PX в REM"
 	},
 	"Divade": {
 		"scope": "scss",
@@ -202,49 +202,49 @@
 		"body": [
 			"math.div($1,$2)"
 		],
-		"description": "Ділення чисел"
+		"description": "Деление чисел"
 	},
 	"Width with REM": {
 		"scope": "scss",
 		"prefix": "w",
 		"body": "width: toRem($1);",
-		"description": "Додає width з переведенням у REM"
+		"description": "Добавляет width с переводом в REM"
 	},
 	"Height with REM": {
 		"scope": "scss",
 		"prefix": "h",
 		"body": "height: toRem($1);",
-		"description": "Додає height з переведенням у REM"
+		"description": "Добавляет height с переводом в REM"
 	},
 	"Margin bottom with REM": {
 		"scope": "scss",
 		"prefix": "mb",
 		"body": "margin-bottom: toRem($1);",
-		"description": "Додає нижній відступ з переведенням у REM"
+		"description": "Добавляет нижний отступ с переводом в REM"
 	},
 	"Margin bottom": {
 		"scope": "css",
 		"prefix": "mb",
 		"body": "margin-bottom: $1px;",
-		"description": "Додає нижній відступ з переведенням у REM"
+		"description": "Добавляет нижний отступ с переводом в REM"
 	},
 	"Margin top with REM": {
 		"scope": "scss",
 		"prefix": "mt",
 		"body": "margin-top: toRem($1);",
-		"description": "Додає верхній відступ з переведенням у REM"
+		"description": "Добавляет верхний отступ с переводом в REM"
 	},
 	"Margin top": {
 		"scope": "css",
 		"prefix": "mt",
 		"body": "margin-top: $1px;",
-		"description": "Додає верхній відступ з переведенням у REM"
+		"description": "Добавляет верхний отступ с переводом в REM"
 	},
 	"Margin bottom with EM": {
 		"scope": "scss",
 		"prefix": "mbe",
 		"body": "margin-bottom: em($1, $2);",
-		"description": "Додає нижній відступ з переведенням у EM"
+		"description": "Добавляет нижний отступ с переводом в EM"
 	},
 	"Margin Bottom not last-child": {
 		"scope": "scss",
@@ -252,7 +252,7 @@
 		"body": [
 			"&:not(:last-child) {margin-bottom: toRem($1);}"
 		],
-		"description": "Додає нижній відступ, виключаючи останній об'єкт"
+		"description": "Добавляет нижний отступ, исключая последний объект"
 	},
 	"Margin Bottom not last-child with EM": {
 		"scope": "scss",
@@ -260,7 +260,7 @@
 		"body": [
 			"&:not(:last-child) {margin-bottom: em($1, $2);}"
 		],
-		"description": "Додає нижній відступ за винятком останнього об'єкту з переведенням у EM"
+		"description": "Добавляет нижний отступ за исключением последнего объекта с переводом в EM"
 	},
 	"Not last-child": {
 		"scope": "scss",
@@ -268,7 +268,7 @@
 		"body": [
 			"&:not(:last-child) {\n\t$1\n}"
 		],
-		"description": "Виключаючи останній об'єкт"
+		"description": "Исключая последний объект"
 	},
 	"Gap": {
 		"scope": "scss",
@@ -285,7 +285,7 @@
 	"Row Gap": {
 		"scope": "scss",
 		"prefix": "rg",
-		"body": "column-gap: toRem($1);",
+		"body": "row-gap: toRem($1);",
 		"description": "Row Gap"
 	},
 	"Opacity": {
