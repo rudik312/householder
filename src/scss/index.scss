@@ -451,20 +451,48 @@
       top: -5px;
     }
   }
+  //.tablet__slider
+  &__slider {
+  }
   // .tablet__wrapper
   &__wrapper {
-
   }
+  //.tablet__slide
+  &__slide {
+  }
+
   // .tablet__item
   &__item {
     display: flex;
     justify-content: center;
   }
-  // .tablet__img-ibg
+  // .tablet__img
   &__img {
     // padding-bottom: percent(537, 990);
     img {
       // object-position: top;
     }
   }
+
+  // .tablet__nav
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  //.tablet__button-prev
+  &__button-prev {
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  //.tablet__button-next
+  &__button-next {
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
 }
+
+

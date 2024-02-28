@@ -1,38 +1,47 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+import { ScrollSmoother } from "gsap/ScrollSmoother.min.js";
 
 
-window.onload = function () {
-  
-  const myScroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    lerp: 0.06, // inertia
-    // offset: [0, 0],
-    // repeat: false,
-    // initPosition: { x: 0, y: 100 },
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    // direction: "vertical", // or horizontal
-    // touchMultiplier: 2,
+ScrollTrigger.normalizeScroll(true);
 
-    // class: "is-inview",
-    // initClass: 'has-scroll-init',
-    // scrollbarClass: 'c-scrollbar',
-    // scrollingClass: 'has-scroll-scrolling',
-    // draggingClass: 'has-scroll-dragging',
-    // smoothClass: "has-scroll-smooth",
-    // scrollbarContainer: false,
-    // getSpeed: false,
-    // getDirection: false,
-    // multiplier: 1,
-    // firefoxMultiplier: 50,
-    // touchMultiplier: 2,
-    // scrollFromAnywhere: false,
-    // gestureDirection: "vertical", // or horizontal, both
-    // reloadOnContextChange: false,
-    // resetNativeScroll: true,
-    // offset: document.querySelector(".install__heading").offsetHeight,
+document.addEventListener('DOMContentLoaded', function (event) {
+
+
+
+const smoother = ScrollSmoother.create({
+    wrapper: ".wrapper",
+    content: ".content",
+		smooth: 1.5,
+		effects: true,
+    normalizeScroll: true, 
   });
+
+  ScrollTrigger.create({
+    trigger: ".install__content",
+    pin: true,
+    start: "top top",
+    end: "+=1000",
+    markers: true
+  });
+
+
+  ScrollTrigger.create({
+    trigger: ".install__parallax",
+    // pin: true,
+    // start: "bottom bottom",
+    start: "+=800",
+    // end: "+=950",
+    markers: true
+  });
+
+
+
+
+
+
 
   // как установить срабатывание scroll, когда секция начинается
 
@@ -48,4 +57,8 @@ window.onload = function () {
   // });
 
   // observer.observe(section);
-};
+
+
+})
+  
+
