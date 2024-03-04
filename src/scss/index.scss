@@ -591,12 +591,14 @@
       height: 125%;
       background-image: url(../img/trust/trust-bg.png);
       background-repeat: no-repeat;
-      top: -110px;
-      left: -80px;
+      top: -120px;
+      right: -80px;
+      z-index: -1;
     }
   }
   // .trust__title
   &__title {
+    z-index: 5;
     max-width: 490px;
     letter-spacing: 0.02em;
     text-transform: lowercase;
@@ -640,5 +642,161 @@
     @extend %mont-400;
     font-size: toRem(16);
     line-height: 160%;
+  }
+}
+//========================================================================================================================================================
+
+//.app
+//========================================================================================================================================================
+.app {
+  // .app__container
+  &__container {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+  // .app__wrapper
+  &__wrapper {
+  }
+  // .app__box
+  &__box {
+    padding-left: 75px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    border-radius: 50px;
+    background-color: $green-light;
+  }
+
+  // .app__top
+  &__top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    .app__img {
+      img {
+        width: 356px;
+        height: 688px;
+        position: absolute;
+        bottom: -60px;
+        left: -30px;
+      }
+    }
+  }
+
+  // .app__img
+  &__img {
+  }
+  //.app__top-content
+  &__top-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .app__items {
+      padding-right: 100px;
+      padding-left: 90px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  // .app__heading
+  &__heading {
+  }
+  // .app__title
+  &__title {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    @extend %mont-600;
+    font-size: toRem(112);
+    letter-spacing: 0.02em;
+  }
+  // .app__title-outside
+  &__title-outside {
+    display: block;
+    text-align: right;
+    @extend %mont-600;
+    font-size: toRem(112);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    background: linear-gradient(133deg, #00c72c 0%, #afe70f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  // .app__title-inner
+  &__title-inner {
+  }
+  // .app__subtitle
+  &__subtitle {
+    @extend %ubun-400;
+    font-size: toRem(18);
+    line-height: 160%;
+    color: #fff;
+  }
+  // .app__items
+  &__items {
+  }
+  // .app__item
+  &__item {
+    max-width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    border-radius: 32px;
+    background-color: #fff;
+  }
+  // .app__item-heading
+  &__item-heading {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+  }
+  // .app__item-icon
+  &__item-icon {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #f2f3f7;
+  }
+  // .app__item-title
+  &__item-title {
+    @extend %must-600;
+    font-size: toRem(20);
+    letter-spacing: 0.02em;
+  }
+  // .app__item-info
+  &__item-info {
+    @extend %ubun-400;
+    font-size: toRem(16);
+    line-height: 140%;
+  }
+  // .app__item-text
+  &__item-text {
+  }
+
+  // .app__bottom
+  &__bottom {
+    position: relative;
+    display: flex;
+    .app__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    .app__img {
+      position: absolute;
+      top: -160px;
+      right: -10px;
+    }
+  }
+}
+
+.app-items {
+  //.app-items__wrapper
+  &__wrapper {
+    display: flex;
+    gap: 30px;
   }
 }

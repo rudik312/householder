@@ -249,8 +249,8 @@ import "./libs/dynamic_adapt.js";
 // import "./libs/locomotive-scroll.min.js";
 
 /*Библиотека gsap */
-// import "./libs/ScrollSmoother.min.js";
 import "./libs/gsap.js";
+// import "./libs/ScrollSmoother.min.js";
 
 
 /* Подключаем файлы со своим кодом */
