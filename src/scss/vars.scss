@@ -4,6 +4,21 @@ $green: #01C82D;
 $green-light: #61D91D;
 $text: #4c5261;
 
+%gradient-bottom {
+  background: linear-gradient(0.00deg, rgba(255, 255, 255, 0.3),rgb(255, 255, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%gradient-top {
+  background: linear-gradient(133deg, #00c72c 0%, #afe70f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 //ArialMT
 //========================================================================================================================================================
 %arial-400 {

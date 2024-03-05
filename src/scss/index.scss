@@ -668,12 +668,26 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     .app__img {
+      position: relative;
       img {
-        width: 356px;
-        height: 688px;
+        // width: 356px;
+        // height: 688px;
+        max-width: 100%;
+        // min-height: 100%;
         position: absolute;
         bottom: -60px;
         left: -30px;
+      }
+      &::before{
+        content:'';
+        position: absolute;
+        background-image: url(../img/app/phone-bg-top.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 414px;
+        height: 414px;
+        left: -53px;
+        bottom: -30px;
       }
     }
   }
@@ -713,17 +727,11 @@
     font-size: toRem(112);
     letter-spacing: 0.02em;
     text-transform: lowercase;
-    background: linear-gradient(133deg, #00c72c 0%, #afe70f 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @extend %gradient-top;
   }
   // .app__title-inner
   &__title-inner {
-    background: linear-gradient(0.00deg, rgba(255, 255, 255, 0),rgb(255, 255, 255));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @extend %gradient-bottom;
   }
   // .app__subtitle
   &__subtitle {
@@ -780,17 +788,36 @@
   }
   // .app__bottom
   &__bottom {
-    position: relative;
-    display: flex;
+    // position: relative;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     .app__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
     .app__img {
-      position: absolute;
-      top: -160px;
-      right: -10px;
+      position: relative;
+      img {
+        // max-width: 100%;
+        // min-height: 100%;
+        position: absolute;
+        top: -160px;
+        right: -10px;
+        z-index: 5;
+      }
+      &::after{
+        content:'';
+        position: absolute;
+        background-image: url(../img/app/phone-bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 414px;
+        height: 414px;
+        right: 60px;
+        bottom: -30px;
+      }
     }
   }
 }
