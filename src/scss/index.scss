@@ -969,6 +969,7 @@
   &__container {
     padding-top: 60px;
     padding-bottom: 75px;
+    
   }
   // .advantage__wrapper
   &__wrapper {
@@ -987,7 +988,15 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-      }
+  }
+  // .advantages__title-inner
+  &__title-inner {
+    @extend %mont-600;
+    font-size: toRem(112);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    @extend %gradient-bottom;
+  }
   // .advantage__box
   &__box {
     padding: 0 110px 60px 100px;
@@ -1006,6 +1015,16 @@
         position: absolute;
         bottom: -110px;
         right: -230px;
+      }
+      &::before{
+        content:'';
+        position: absolute;
+        background-image: url(../img/advantage/notebook-bg.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 489px;
+        height: 489px;
+        left: -60px;
       }
     }
     .advantage__items {
@@ -1063,27 +1082,141 @@
         top: 44px;
         left: -20px;
       }
+      &::before{
+        content:'';
+        position: absolute;
+        background-image: url(../img/advantage/iphone-bg.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 448px;
+        height: 448px;
+        top: 75px;
+      }
     }
   }
 }
-.advantages {
-  // .advantages__title
-  &__title {
 
+//========================================================================================================================================================
+
+
+
+//.reviews
+//========================================================================================================================================================
+
+
+.reviews {
+  // .reviews__container
+  &__container {
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
-  // .advantages__title-inner
-  &__title-inner {
+  // .reviews__box
+  &__box {
+    // padding: 50px 60px;
+    padding: 45px 50px 50px 50px;
+    border-radius: 50px;
+    background-color: $green-light;
+  }
+  // .reviews__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .reviews__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .reviews__heading
+  &__heading {
+    display: flex;
+    column-gap: 120px;
+    align-items: center;
+  }
+  // .reviews__title
+  &__title {
     @extend %mont-600;
     font-size: toRem(112);
     letter-spacing: 0.02em;
-    text-transform: lowercase;
+    text-transform: lowercase;  
+    color: #fff;
     @extend %gradient-bottom;
   }
-  // .advantages__inner
-  &__inner {
-    // display: flex;
-    // flex-direction: column;
-    // row-gap: 10px;
+  // .reviews__subtitle
+  &__subtitle {
+    max-width: 300px;
+    @extend %ubun-400;
+    font-size: toRem(16);
+    line-height: 140%;
+    color: #fff;
+    opacity: 0.8;
+  }
+  // .reviews__nav
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+  // .reviews__btn-prev
+  // .reviews__btn-next
+  &__btn-prev,
+  &__btn-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  // .reviews__slider
+  &__slider {
+  }
+  // .reviews__slide
+  &__slide {
+    max-width: 445px;
+    padding: 30px;
+    border-radius: 32px;
+    background-color: #fff;
+  }
+  // .reviews__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .reviews__slide-heading
+  &__slide-heading {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+  // .reviews__slide-title
+  &__slide-title {
+    @extend %mont-600;
+    font-size: toRem(24);
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    background: linear-gradient(137deg, #000 0%, #878484 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  // .reviews__info
+  &__info {
+  }
+  // .reviews__text
+  &__text {
+    @extend %arial-500;
+    font-size: toRem(16);
+    line-height: math.div(28 , 16);
+    color: $black;
   }
 }
+
+
+//========================================================================================================================================================
 
