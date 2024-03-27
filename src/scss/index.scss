@@ -1098,12 +1098,8 @@
 
 //========================================================================================================================================================
 
-
-
 //.reviews
 //========================================================================================================================================================
-
-
 .reviews {
   // .reviews__container
   &__container {
@@ -1207,6 +1203,7 @@
   }
   // .reviews__info
   &__info {
+    
   }
   // .reviews__text
   &__text {
@@ -1217,6 +1214,85 @@
   }
 }
 
-
 //========================================================================================================================================================
 
+//.question
+//========================================================================================================================================================
+.question {
+  // .question__container
+  &__container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  // .question__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  // .question__heading
+  &__heading {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+    @extend %mont-600;
+    font-size: toRem(48);
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+  }
+  // .question__title
+  &__title {
+    color: $green;
+  }
+  //.question__title-decor
+  &__title-decor {
+    position: relative;
+    @extend %gradient-top;
+    &::before{
+      content:'';
+      position: absolute;
+      background-image: url(../img/question/text-dec.png);
+      background-repeat: no-repeat;
+      width: 282px;
+      height: 71px;
+      top: -10px;
+      left: -20px;
+    }
+  }
+  // .question__spollers
+  &__spollers {
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      background-image: url(../img/question/question-bg.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      left: 15%;
+    }
+  }
+}
+.spollers {
+  // .spollers__item
+  &__item {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #000;
+  }
+  // .spollers__title
+  &__title {
+    padding-right: 60px;
+    @extend %mont-600;
+    line-height: 140%;
+    background: linear-gradient(137deg, #000 0%, #878484 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    p {
+      max-width: 1050px;
+    }
+  }
+  // .spollers__body
+  &__body {
+  }
+}

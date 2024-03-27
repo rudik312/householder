@@ -47,7 +47,7 @@ flsFunctions.menuInit();
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль "Табы"
@@ -249,7 +249,7 @@ import "./libs/dynamic_adapt.js";
 // import "./libs/locomotive-scroll.min.js";
 
 /*Библиотека gsap */
-import "./libs/gsap.js";
+// import "./libs/gsap.js";
 // import "./libs/ScrollSmoother.min.js";
 
 
